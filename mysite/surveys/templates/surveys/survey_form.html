@@ -1,0 +1,12 @@
+{% block title %}Take Survey{% endblock %}
+
+{% block content %}
+  <h2>Survey: {{ survey.title }}</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <!-- For now just a placeholder input -->
+    <label>Your Answer:</label>
+    <input type="text" name="answer">
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

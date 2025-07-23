@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Survey App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'survey_list' %}">Survey Manager</a></h1>
+        <nav>
+            <a href="{% url 'survey_list' %}">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Page content will go here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Survey Manager App</p>
+    </footer>
+</body>
+</html>
