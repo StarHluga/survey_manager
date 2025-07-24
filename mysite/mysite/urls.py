@@ -23,4 +23,5 @@ urlpatterns = [
     path('surveys/', include('surveys.urls')),
     path('api/', include('surveys.api.urls')),
     path('', home_view, name='home'),
+    
 ]
