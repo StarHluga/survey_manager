@@ -197,3 +197,6 @@ class SurveyResultsView(LoginRequiredMixin, DetailView):
         context['question_stats'] = question_stats
         
         return context
+
+def home_view(request):
+    return render(request, 'home/index.html')

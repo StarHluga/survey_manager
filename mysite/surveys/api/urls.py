@@ -1,7 +1,3 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import SurveyViewSet, QuestionViewSet, ResponseViewSet, AnswerViewSet, ChoiceViewSet, SurveyCreateViewSet
-
 # mysite/surveys/api/urls.py
 # This file sets up the API endpoints for the surveys application using Django REST Framework.
 from django.urls import path, include
@@ -33,5 +29,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('surveys/<int:survey_pk>/', include(survey_router.urls)),
     path('questions/<int:question_pk>/', include(question_router.urls)),
-   # path('auth/', include('dj_rest_auth.urls')),
+    path('auth/', include('dj_rest_auth.urls')),
 ]   
